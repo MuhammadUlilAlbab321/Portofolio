@@ -136,6 +136,13 @@
 
   .hero-left { position: relative; z-index: 2; }
 
+  .hero-name-wrap {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
   .hero-tag {
     display: inline-flex; align-items: center; gap: 0.5rem;
     font-family: 'Space Mono', monospace;
@@ -161,6 +168,16 @@
     animation: fadeUp 0.8s 0.25s both;
   }
   .hero-name span { color: var(--accent); }
+
+  .hero-name-photo {
+    width: clamp(72px, 10vw, 110px);
+    height: clamp(72px, 10vw, 110px);
+    border-radius: 50%;
+    border: 2px solid rgba(255, 76, 0, 0.6);
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    animation: fadeUp 0.8s 0.3s both;
+  }
 
   .hero-subtitle {
     font-family: 'Syne', sans-serif;
@@ -672,7 +689,10 @@
 
   <div class="hero-left">
     <div class="hero-tag">Automation Engineering Student</div>
-    <h1 class="hero-name">Muhammad<br>Ulil <span>Albab</span></h1>
+    <div class="hero-name-wrap">
+      <h1 class="hero-name">Muhammad<br>Ulil <span>Albab</span></h1>
+      <img class="hero-name-photo" src="foto/foto%20profil.jpeg" alt="Foto profil Muhammad Ulil Albab">
+    </div>
     <p class="hero-subtitle">Industrial Automation · Control Systems · Instrumentation</p>
     <p class="hero-desc">
       Third-year student at Diponegoro University with hands-on experience in sensors, actuators, control logic, embedded systems, and SCADA. Ready to contribute to real-world industrial environments.
